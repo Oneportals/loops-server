@@ -58,6 +58,11 @@ COPY --from=node /usr/local/lib /usr/local/lib
 # Install npm dependencies and build assets
 
 RUN npm install --include=dev
+
+RUN chown -R www-data:www-data /var/www/html/node_modules
+
+RUN chmod -R 775 /var/www/html/node_modules
+
 RUN npm run build
 
 ENV NODE_ENV="production"
