@@ -32,7 +32,7 @@ RUN install-php-extensions \
     pdo_mysql \
     redis \
     tokenizer \
-    vips \
+    # vips \
     ffi \
     xml \
     zip
