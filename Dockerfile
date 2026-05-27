@@ -30,6 +30,8 @@ RUN install-php-extensions \
     mbstring \
     openssl \
     pdo_mysql \
+    pdo_pgsql \
+    pgsql \
     redis \
     tokenizer \
     # vips \
