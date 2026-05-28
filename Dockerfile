@@ -26,6 +26,7 @@ RUN install-php-extensions \
     curl \
     fileinfo \
     gd \
+    imagick \
     intl \
     json \
     mbstring \
