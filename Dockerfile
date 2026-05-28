@@ -57,18 +57,29 @@ COPY --from=node /usr/local/lib /usr/local/lib
 
 # Install npm dependencies and build assets
 
+3RUN npm install --include=dev
+
+#RUN chown -R www-data:www-data /var/www/html/node_modules
+
+#RUN chmod -R 775 /var/www/html/node_modules
+
+#RUN npm run build
+
+#ENV NODE_ENV="production"
+
+##pratik edits 
 RUN npm install --include=dev
 
 RUN chown -R www-data:www-data /var/www/html/node_modules
 
-RUN chmod -R 775 /var/www/html/node_modules
+USER www-data
 
 RUN npm run build
 
-ENV NODE_ENV="production"
+USER root
 
 # Switch back to www-data user
-USER www-data
+#USER www-data
 
 # Expose port 8080 (default for serversideup/php)
 EXPOSE 8080
