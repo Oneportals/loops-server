@@ -11,6 +11,7 @@ USER root
 
 # Install system dependencies and PHP extensions
 RUN apt-get update && apt-get install -y \
+    ffmpeg \
     unzip \
     zip \
     git \
