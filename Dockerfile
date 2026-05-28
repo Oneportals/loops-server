@@ -24,20 +24,20 @@ RUN install-php-extensions \
     curl \
     fileinfo \
     gd \
-    imagick \
+    #imagick \
     intl \
     json \
     mbstring \
     openssl \
-    pdo_mysql \
+    #pdo_mysql \
     pdo_pgsql \
     pgsql \
     redis \
     tokenizer \
     # vips \
-    ffi \
-    xml \
-    zip
+    #ffi \
+    #xml \
+    #zip
 
 # Copy application files
 COPY --chown=www-data:www-data . /var/www/html
