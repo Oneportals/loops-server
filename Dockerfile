@@ -34,7 +34,11 @@ RUN install-php-extensions \
     pdo_pgsql \
     pgsql \
     redis \
-    tokenizer
+    tokenizer \
+    vips \
+    ffi \
+    xml \
+    zip
 
 #pdo_mysql \ imagick \ vips \ ffi \ xml \ zip
 
